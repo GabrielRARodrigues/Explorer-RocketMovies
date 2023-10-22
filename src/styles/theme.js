@@ -2,6 +2,7 @@ export default {
   COLORS: {
     'WHITE': '#F4EDE8',
     'PINK': '#FF859B',
+    'RED': '#282124',
     'BACKGROUND': {
       'EXTRA_LIGHT': '#FF859B0D',
       'LIGHT': '#262529',
@@ -10,10 +11,12 @@ export default {
       'EXTRA_DARK': '#0D0C0F'
     },
     'GRAY': {
-      'EXTRA_LIGHT': '##E5E5E5',
+      'EXTRA_LIGHT': '#E5E5E5',
       'LIGHT': '#CAC4CF',
       'REGULAR': '#999591',
-      'DARK': '#948F99'
+      'DARK': '#948F99',
+      'EXTRA_DARK': '#3E3B47',
+      
     }
   },
   FONT: {
