@@ -3,7 +3,11 @@ import { createGlobalStyle } from 'styled-components'
 export const Reset = createGlobalStyle`
   * {
     padding: 0;
+    padding-inline: 0;
+    padding-block: 0;
     margin: 0;
+    margin-block: 0;
+    margin-inline: 0;
     box-sizing: border-box;
   }
 

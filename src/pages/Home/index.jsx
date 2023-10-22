@@ -43,8 +43,6 @@ export function Home() {
               <Note data={data} />
               <Note data={data} />
               <Note data={data} />
-              <Note data={data} />
-              <Note data={data} />
             </Notes>
           </section>
         </Content>

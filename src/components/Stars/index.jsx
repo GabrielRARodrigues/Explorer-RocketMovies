@@ -3,7 +3,17 @@ import { Container } from './styles'
 
 export function Stars({ count }) {
   function renderStars(number) {
-    if (number === 1) {
+    if (number === 0) {
+      return (
+        <>
+          <AiOutlineStar />
+          <AiOutlineStar />
+          <AiOutlineStar />
+          <AiOutlineStar />
+          <AiOutlineStar />
+        </>
+      )
+    } else if (number === 1) {
       return (
         <>
           <AiFillStar />

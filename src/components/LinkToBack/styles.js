@@ -7,15 +7,8 @@ export const Container = styled(Link)`
   justify-content: center;
   gap: 8px;
 
-  padding: 16px 32px;
-
-  background-color: ${({ theme }) => theme.COLORS['PINK']};
-
-  border: none;
-  border-radius: 10px;
-
   font-size: ${({ theme }) => theme.FONT.SIZE['MD']};
+  color: ${({ theme }) => theme.COLORS.PINK};
   font-weight: 400;
   line-height: 21px;
-  color: ${({ theme }) => theme.COLORS.BACKGROUND['DARK']};
 `

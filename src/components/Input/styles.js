@@ -24,7 +24,7 @@ export const Container = styled.div`
     padding-block: 16px;
 
     font-size: ${({ theme }) => theme.FONT.SIZE['MD']};
-    color: ${({ theme }) => theme.COLORS.GRAY['DARK']};
+    color: ${({ theme }) => theme.COLORS.WHITE};
 
     background: transparent;
     border: 0;
