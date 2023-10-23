@@ -6,7 +6,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND['LIGHT']};
 
   display: flex;
-  text-align: center;
+  align-items: center;
   gap: 16px;
 
   padding-inline: 16px;

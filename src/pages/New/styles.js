@@ -11,10 +11,10 @@ export const Container = styled.div`
     'content';
 `
 export const Content = styled.main`
-  width: 100%;
-  max-width: calc(1128px + 249px);
+  width: 90%;
+  max-width: 1128px;
   margin: 40px auto 85px;
-  padding-inline: 124px;
+  padding-right: 16px;
 
   grid-area: content;
 
@@ -79,8 +79,6 @@ export const Bookmarks = styled.div`
   border-radius: 8px;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND['EXTRA_DARK']};
-
-
 `
 
 export const Buttons = styled.div`

@@ -5,6 +5,6 @@ export const Container = styled.div`
   align-items: center;
   gap: 5px;
 
-  font-size: 12px;
+  font-size: ${({ $size }) => `${$size}px`};
   color: ${({ theme }) => theme.COLORS['PINK']};
 `

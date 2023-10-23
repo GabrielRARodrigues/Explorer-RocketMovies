@@ -4,10 +4,10 @@ import { Stars } from '../Stars'
 import { Tag } from '../Tag'
 
 export function Note({ data, ...rest }) {
-  const { title, rating, description, tags } = data
+  const { id, title, rating, description, tags } = data
 
   return (
-    <Container {...rest}>
+    <Container to={`/details/${id}`} {...rest}>
       <h2>{title}</h2>
       <Stars count={rating} />
       <p>{description}</p>

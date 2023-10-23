@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.h1`
+export const Container = styled.h2`
   color: ${({ theme }) => theme.COLORS.WHITE};
   font-size: ${({ theme }) => theme.FONT.SIZE['XLG']};
   font-weight: 500;

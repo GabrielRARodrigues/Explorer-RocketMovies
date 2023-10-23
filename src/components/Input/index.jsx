@@ -3,6 +3,7 @@ import { Container } from './styles'
 export function Input({
   icon: Icon,
   type = 'text',
+  value = '',
   id = 'textInput',
   placeholder,
   ...rest
@@ -13,7 +14,13 @@ export function Input({
       <label className="sr-only" htmlFor={id}>
         {placeholder}
       </label>
-      <input id={id} type={type} placeholder={placeholder} {...rest} />
+      <input
+        value={value}
+        id={id}
+        type={type}
+        placeholder={placeholder}
+        {...rest}
+      />
     </Container>
   )
 }

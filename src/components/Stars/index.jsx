@@ -1,7 +1,7 @@
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import { Container } from './styles'
 
-export function Stars({ count }) {
+export function Stars({ count, size = 12 }) {
   function renderStars(number) {
     if (number === 0) {
       return (
@@ -66,5 +66,5 @@ export function Stars({ count }) {
     }
   }
 
-  return <Container>{renderStars(count)}</Container>
+  return <Container $size={size}>{renderStars(count)}</Container>
 }
