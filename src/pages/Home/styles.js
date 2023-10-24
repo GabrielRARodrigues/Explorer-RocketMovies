@@ -5,15 +5,15 @@ export const Container = styled.div`
   height: 100vh;
 
   & > main {
-    margin-block: 56px;
+    margin-block: 32px;
     grid-area: content;
   }
 `
 
 export const Content = styled.div`
   width: 90%;
-  max-width: 1120px;
-  height: calc(100vh - 228px);
+  max-width: 1140px;
+  height: calc(100vh - 180px);
   margin-inline: auto;
 
   display: grid;
@@ -34,7 +34,7 @@ export const Content = styled.div`
 
   & > section {
     padding-right: 8px;
-    
+
     overflow-y: auto;
 
     &::-webkit-scrollbar {

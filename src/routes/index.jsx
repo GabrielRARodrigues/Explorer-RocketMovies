@@ -3,10 +3,18 @@ import { AuthRoutes } from './auth.routes'
 import { AppRoutes } from './app.routes'
 
 export function Routes() {
-  return (
-    <BrowserRouter>
-      <AuthRoutes />
-      <AppRoutes />
-    </BrowserRouter>
-  )
+  const login = true
+  if (login) {
+    return (
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    )
+  } else {
+    return (
+      <BrowserRouter>
+        <AuthRoutes />
+      </BrowserRouter>
+    )
+  }
 }

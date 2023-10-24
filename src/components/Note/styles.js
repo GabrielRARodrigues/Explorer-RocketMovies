@@ -24,6 +24,7 @@ export const Container = styled(Link)`
     font-size: ${({ theme }) => theme.FONT.SIZE['MD']};
     font-weight: 400;
     line-height: 19px;
+    text-align: justify;
 
     margin-block: 16px 32px;
   }

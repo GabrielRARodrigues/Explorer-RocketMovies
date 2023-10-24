@@ -13,7 +13,7 @@ export function Header({ userName }) {
         <div>
           <strong>{userName}</strong>
           <span>
-            <Link to="login">sair</Link>
+            <Link to="/">sair</Link>
           </span>
         </div>
         <Link to="/profile">
