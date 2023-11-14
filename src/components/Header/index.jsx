@@ -1,8 +1,29 @@
-import { Link } from 'react-router-dom'
-import { Input } from '../Input'
 import { Container, Profile } from './styles'
 
-export function Header({ userName }) {
+import { Link, useNavigate } from 'react-router-dom'
+
+import { Input } from '../Input'
+
+import { Confirm } from '../../utils/alerts/alert'
+
+import { useAuth } from '../../hooks/useAuth'
+
+export function Header() {
+  const navigate = useNavigate()
+
+  const { signOut, user } = useAuth()
+
+  function handleSignOut() {
+    Confirm('Você tem certeza que deseja sair?', 'Sim, desejo sair').then(
+      result => {
+        if (result.isConfirmed) {
+          navigate('/')
+          signOut()
+        }
+      }
+    )
+  }
+
   return (
     <Container>
       <Link to="/">
@@ -11,9 +32,11 @@ export function Header({ userName }) {
       <Input placeholder="Pesquisar pelo título" />
       <Profile>
         <div>
-          <strong>{userName}</strong>
+          <strong>{user.name}</strong>
           <span>
-            <Link to="/">sair</Link>
+            <Link to="/" onClick={handleSignOut}>
+              sair
+            </Link>
           </span>
         </div>
         <Link to="/profile">

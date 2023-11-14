@@ -3,9 +3,16 @@ import { Container } from './styles'
 export function Input({
   icon: Icon,
   type = 'text',
-  value = '',
+  name,
+  value,
   id = 'textInput',
   placeholder,
+  title,
+  onChange,
+  required = false,
+  pattern,
+  minLength,
+  maxLength,
   ...rest
 }) {
   return (
@@ -15,10 +22,17 @@ export function Input({
         {placeholder}
       </label>
       <input
+        name={name}
         value={value}
         id={id}
         type={type}
         placeholder={placeholder}
+        title={title}
+        onChange={onChange}
+        required={required}
+        pattern={pattern}
+        minLength={minLength}
+        maxLength={maxLength}
         {...rest}
       />
     </Container>

@@ -31,7 +31,7 @@ export function Home() {
 
   return (
     <Container>
-      <Header userName="Gabriel Rodrigues" />
+      <Header />
       <main>
         <Content>
           <div>

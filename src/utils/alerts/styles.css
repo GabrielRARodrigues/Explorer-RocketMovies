@@ -1,0 +1,49 @@
+.alert__container {
+  font-family: 'Roboto', sans-serif;
+}
+
+.alert__title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #f4ede8;
+}
+
+.alert__confirm-button {
+  font-size: 18px !important;
+  color: #1c1b1e !important;
+}
+
+.error__container {
+  font-family: 'Roboto', sans-serif;
+}
+
+.error__title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #f4ede8;
+}
+
+.error__confirm-button {
+  font-size: 18px !important;
+}
+
+.confirm__container {
+}
+
+.confirm__title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #f4ede8;
+}
+
+.confirm__text {
+}
+
+.confirm__confirm-button {
+  font-size: 24px;
+  font-weight: 500;
+  color: #f4ede8;
+}
+
+.confirm__cancel-button {
+}
