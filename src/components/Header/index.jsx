@@ -4,9 +4,13 @@ import { Link, useNavigate } from 'react-router-dom'
 
 import { Input } from '../Input'
 
+import avatarPlaceholder from '../../assets/images/avatar_placeholder.svg'
+
 import { Confirm } from '../../utils/alerts/alert'
 
 import { useAuth } from '../../hooks/useAuth'
+
+import api from '../../services/api'
 
 export function Header() {
   const navigate = useNavigate()
@@ -24,6 +28,10 @@ export function Header() {
     )
   }
 
+  const avatarUrl = user.avatar
+    ? `${api.defaults.baseURL}files/${user.avatar}`
+    : avatarPlaceholder
+
   return (
     <Container>
       <Link to="/">
@@ -34,16 +42,11 @@ export function Header() {
         <div>
           <strong>{user.name}</strong>
           <span>
-            <Link to="/" onClick={handleSignOut}>
-              sair
-            </Link>
+            <Link onClick={handleSignOut}>sair</Link>
           </span>
         </div>
         <Link to="/profile">
-          <img
-            src="https://github.com/GabrielRARodrigues.png"
-            alt="Logo do usuário"
-          />
+          <img src={avatarUrl} alt={`Foto do usuário ${user.name}`} />
         </Link>
       </Profile>
     </Container>

@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react'
 
-import { Erro } from '../../utils/alerts/alert'
+import { Alert, Erro } from '../../utils/alerts/alert'
 
 import api from '../../services/api'
 
@@ -41,6 +41,35 @@ function AuthProvider({ children }) {
     setData({})
   }
 
+  async function updateProfile({ user, avatarFile }) {
+    try {
+      if (avatarFile) {
+        const formDataFromAvatarFile = new FormData()
+        formDataFromAvatarFile.append('avatar', avatarFile)
+
+        const updateAvatarResponse = await api.patch(
+          'users/avatar',
+          formDataFromAvatarFile
+        )
+        user.avatar = updateAvatarResponse.data.avatar
+      }
+
+      await api.put('users', user)
+
+      const updatedUser = (await api.get('users')).data
+
+      localStorage.setItem('@rocketmovies:user', JSON.stringify(updatedUser))
+
+      setData({ user: updatedUser, token: data.token })
+      Alert('Perfil atualizado com sucesso')
+    } catch (error) {
+      if (error.response) {
+        Erro(error.response.data.message)
+      } else {
+        Erro('Não foi possível atualizar o perfil.')
+      }
+    }
+  }
   useEffect(() => {
     const user = localStorage.getItem('@rocketmovies:user')
     const token = localStorage.getItem('@rocketmovies:token')
@@ -56,7 +85,9 @@ function AuthProvider({ children }) {
   }, [])
 
   return (
-    <AuthContext.Provider value={{ signIn, signOut, user: data.user }}>
+    <AuthContext.Provider
+      value={{ signIn, signOut, updateProfile, user: data.user }}
+    >
       {children}
     </AuthContext.Provider>
   )
