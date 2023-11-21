@@ -20,7 +20,7 @@ function AuthProvider({ children }) {
       const { user, token } = response.data
 
       localStorage.setItem('@rocketmovies:user', JSON.stringify(user))
-      localStorage.setItem('@rocketmovies:token', JSON.stringify(token))
+      localStorage.setItem('@rocketmovies:token', token)
 
       api.defaults.headers.common.Authorization = `Bearer ${token}`
 
@@ -75,7 +75,7 @@ function AuthProvider({ children }) {
     const token = localStorage.getItem('@rocketmovies:token')
 
     if (token && user) {
-      api.defaults.headers.common.Authorization = `Bearer ${token}`
+      api.defaults.headers.common['Authorization'] = `Bearer ${token}`
 
       setData({
         user: JSON.parse(user),

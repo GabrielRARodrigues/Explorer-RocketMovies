@@ -60,7 +60,7 @@ export function Stars({ count, size = 12 }) {
           <AiFillStar />
           <AiFillStar />
           <AiFillStar />
-          <AiOutlineStar />
+          <AiFillStar />
         </>
       )
     }

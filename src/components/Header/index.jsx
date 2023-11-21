@@ -12,7 +12,7 @@ import { useAuth } from '../../hooks/useAuth'
 
 import api from '../../services/api'
 
-export function Header() {
+export function Header({ setSearchTitle }) {
   const navigate = useNavigate()
 
   const { signOut, user } = useAuth()
@@ -37,7 +37,7 @@ export function Header() {
       <Link to="/">
         <h2>RocketMovies</h2>
       </Link>
-      <Input placeholder="Pesquisar pelo título" />
+      <Input placeholder="Pesquisar pelo título" onChange={event => setSearchTitle(event.target.value)}/>
       <Profile>
         <div>
           <strong>{user.name}</strong>

@@ -7,6 +7,7 @@ export function NoteMarker({
   placeholder,
   id = 'marker',
   onClick,
+  onChange,
   ...rest
 }) {
   return (
@@ -17,6 +18,7 @@ export function NoteMarker({
         placeholder={placeholder}
         value={value}
         readOnly={!isNew}
+        onChange={onChange}
         {...rest}
       />
       <label className="sr-only" htmlFor={id}>

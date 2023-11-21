@@ -73,6 +73,7 @@ export const Bookmarks = styled.div`
   padding: 16px;
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 24px;
 
