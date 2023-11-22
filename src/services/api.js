@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:3330/'
+  baseURL: 'https://rocketmovies-api-dt90.onrender.com'
 })
 
 export default api
